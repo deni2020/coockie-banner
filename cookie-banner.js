@@ -26,7 +26,8 @@ if (document.cookie.split('; ').indexOf('cookieaccept=1') === -1) void function 
 				'</button>'+
 			'</div>'
 		;
-		_.querySelector('button').addEventListener('click', function () {
+		_.querySelector('button').addEventListener('click', function (e) {
+			e.preventDefault()
 			_.style.display = 'none'
 			_.remove()
 			var t = new Date()
