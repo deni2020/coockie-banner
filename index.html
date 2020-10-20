@@ -1,0 +1,14 @@
+<base><script>
+void function(baseElem,href){
+	if (!href) throw href
+	var match = href.match(/https:\/\/[^.\/]+\.github\.io\/[^.\/]+/)
+	if (match) return baseElem.href = match + '/'
+
+	match = href.match(/file:\/\/.+\/coockie-banner/)
+	if (match) return baseElem.href = match + '/'
+
+	baseElem.remove();
+}(document.currentScript.previousElementSibling,location.href)
+</script>
+
+<script src=cookie-banner.js></script>
